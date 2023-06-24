@@ -18,6 +18,7 @@ int main() {
 
 	printf("Reading the burst time of each process... \n");
 	for (i=0; i<numberOfProcesses; i++) {
+		p[i].id = i+1;
 		printf("Process %d\t->\t", i+1);
 		scanf("%d", &p[i].bt);
 		// Initializing RBT of each process with their BTs
@@ -93,7 +94,7 @@ int main() {
 
 	// Displaying the GANTT chart
 	printf("\n---GANTT CHART---\n");
-	for (i=0; i<k; i++) 
+	for (i=1; i<k; i++) 
 		printf("|\tP%d\t",out[i].id);
 	printf("|\n");
 	for (i=0; i<k; i++) 
