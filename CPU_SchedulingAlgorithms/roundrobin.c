@@ -33,9 +33,9 @@ int main() {
 	// Initialize the TAT of the first process with 0
 	out[0].tat = 0;
 
-	int compareTAT = 0;
+	int complete = 0;
 
-	while (compareTAT != netBurst) {
+	while (complete != netBurst) {
 		for (i=0; i<numberOfProcesses; i++) {
 			if (p[i].rbt != 0) {
 				out[k].id = i+1;
@@ -55,8 +55,8 @@ int main() {
 					// Update WT of the process
 					p[i].wt = p[i].tat - p[i].bt;
 
-					// Set compareTAT to the TAT of kth process and increment k
-					compareTAT = out[k].tat;
+					// Set complete to the TAT of kth process and increment k
+					complete = out[k].tat;
 					k++;	
 					
 					// Update totalTAT and totalWT
@@ -73,8 +73,8 @@ int main() {
 					// Decrement timeQuanta from the RBT of each process
 					p[i].rbt -= timeQuanta;
 
-					// Set compareTAT to the TAT of the kth process and increment k
-					compareTAT = out[k].tat;
+					// Set complete to the TAT of the kth process and increment k
+					complete = out[k].tat;
 					k++;
 				}
 			}

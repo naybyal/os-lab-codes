@@ -1,6 +1,6 @@
 echo "Reading number to check if it's prime or not..."
 read num
-if [ $num -lt 2 ]
+if ((num<2))
 then	
 	echo "Not prime."
 	exit 0

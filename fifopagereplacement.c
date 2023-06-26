@@ -47,10 +47,7 @@ int main()
 		printf("%d\t\t\t",incomingStream[m]);
 		for(n = 0; n < frames; n++)
 		{
-		    if(temp[n] != -1)
 			printf(" %d\t\t\t", temp[n]);
-		    else
-			printf(" - \t\t\t");
 		}
 	}
 
